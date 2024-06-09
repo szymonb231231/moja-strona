@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="origin-trial" content="AjskG7XjAzhXrbO5iSypw0OSMflgB2aEgoT9BuzVaQngLsZbHPNipBOjM5tTKu6K+S0lotXG8JBfV/1QUGK2iA8AAABgeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTl9">
+<meta http-equiv="origin-trial" content="AjJfx2Fc/ccVadVL73yJ+kv2NuDH2tCOphZBB8z8hLZwpUUPHK2olPhEw4pbJX97kZj5pkTvi23hXizmXgmKJAIAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXJzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApLp/OzAos2ZLg2Aj+PqyWNgFJW7gUzPfDu5vLD3SRuSdbaq5hcDJBO0Lf+zICPweHUK0M3PjqjuMcPTni6pOgwAAAB4eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXByb2QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="AqaA9S6ymlbsCNw5fDNelQZgvTNwgTE90zjRDCFnj98ww2WBD5D2Jl7+nVoQ//+18EJ+csrMMEDKGUG8AKqCUg8AAAB5eyJvcmlnaW4iOiJodHRwczovL2NvcnAuZ29vZ2xlLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApJuSYjXxJdKQ7vMoqAiMsVFAegmzj5tlJvh7EVylBXpKh3ZH8/afXTEG3u3Vh14w7vtxWwUfQlYMgFl2uqkGwYAAACHeyJvcmlnaW4iOiJodHRwczovL3NlcnZlLWRvdC16aXBsaW5lLmFwcHNwb3QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="ApQn/7irvRoObTPJw7PT+HV8KwBTb9W3lo+2zRFoxdnTffkbkJh6ykiSae52WnAaHyWB8yYxzm+SPj8Gq3sEFA4AAACUeyJvcmlnaW4iOiJodHRwczovL2ltbWVyc2l2ZS1jYW1lcmEtcGxheWdyb3VuZC5nb29nbGVwbGV4LmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE2ODgwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
+<link rel="icon" href="https://www.gstatic.com/earth/00-favicon.ico">
+<script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.pl.X8qEh8FXihc.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw/cb=gapi.loaded_0?le=scs" async=""></script><script async="">
+      (() => {
+        // This detects Chromium browsers which use a different, smaller version of Canvaskit. This
+        // preload logic is the same as the actual loading logic built into Flutter.
+        let isChromium = Intl.v8BreakIterator != null && Intl.Segmenter != null;
+        let canvaskitBaseUrl = "https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/"
+        if (isChromium) {
+          canvaskitBaseUrl += "chromium/"
+        }
+
+        const canvasKitWasmPreload = document.createElement("link");
+          canvasKitWasmPreload.href = canvaskitBaseUrl + "canvaskit.wasm";
+          canvasKitWasmPreload.rel = "preload";
+          canvasKitWasmPreload.as = "fetch";
+          // Only .wasm should use crossOrigin mode because it is "fetch" type.
+          canvasKitWasmPreload.crossOrigin = "anonymous";
+          document.head.appendChild(canvasKitWasmPreload);
+
+        const canvasKitJsPreload = document.createElement("link");
+          canvasKitJsPreload.href = canvaskitBaseUrl + "canvaskit.js";
+          canvasKitJsPreload.rel = "preload";
+          canvasKitJsPreload.as = "script";
+          document.head.appendChild(canvasKitJsPreload);
+      })();
+    </script><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.wasm" rel="preload" as="fetch" crossorigin="anonymous"><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.js" rel="preload" as="script">
+<script src="assets/clearcut_uploader_compiled.js" defer=""></script>
+<script src="assets/feedback_compiled.js" defer=""></script>
+<script src="assets/hats_compiled.js" defer=""></script>
+<script src="assets/phenotype_client_compiled.js" defer=""></script>
+<script src="assets/drive_picker_compiled.js" defer=""></script>
+<script>(async()=>{const adapter=navigator.gpu&&await navigator.gpu.requestAdapter();const device=adapter&&await adapter.requestDevice();window['webgpu-device']=device;})();window['module']={};</script>
+<script src="assets/plugins_compiled.js" defer=""></script>
+<script src="main.dart.js" defer=""></script>
+<script src="assets/earthplugin_web_wasm/earthplugin_web.js" defer=""></script>
+<link rel="manifest" href="assets/assets/manifest.json" crossorigin="use-credentials" fetchpriority="low">
+<link rel="preload" href="assets/FontManifest.json" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/All1PIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/googlematerialicons/GoogleMaterialIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSymbols_FILL_GRAD_opsz_wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/MaterialIcons-Extended.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Bold.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-BoldItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Italic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Medium.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-MediumItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-Italic-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/ProductSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/KeySymbols-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/kml_path.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/3d.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="prefetch" href="https://kh.google.com/rt/earth/PlanetoidMetadata" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/earthplugin_web_wasm/earthplugin_web.wasm" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link rel="preconnect" href="https://accounts.google.com">
+<link rel="preconnect" href="https://earth-pa.clients6.google.com">
+<link rel="preconnect" href="https://mw1.google.com">
+<link rel="preconnect" href="https://kh.google.com">
+<link rel="preconnect" href="https://apis.google.com">
+<style>@font-face{font-family:'Google Sans Text';font-style:normal;font-weight:400;font-display:block;src:url(assets/GoogleSansText-Regular.ttf) format('truetype')}body{margin:0;padding:0;background-color:#000}#earth-splashscreen{width:100%;height:100%;position:absolute;backgrund-color:black;background-image:url(assets/assets/images/logo_lockup.svg) , url(https://www.gstatic.com/earth/images/00-earth-splash-1x-ltr.jpg) , url(https://www.gstatic.com/earth/images/00-earth-splash-mask-ltr.svg) , url(https://www.gstatic.com/earth/images/01-earth-splash-stars-ltr.webp);background-position:center , bottom right , bottom right , top right;background-size:256px 49px , 1280px 463px , 1164px 380px , cover;background-repeat:no-repeat , no-repeat , no-repeat , no-repeat;background-blend-mode:normal , lighten , normal , normal;-webkit-font-smoothing:subpixel-antialiased;margin:0;padding:0}.earth-splashscreen-vcenter{position:absolute;top:50%;transform:translateY(-50%);width:100%}.earth-splashscreen-hcenter{margin-left:auto;margin-right:auto;position:relative;text-align:center}#earth-splashscreen-spinner{margin-left:auto;margin-right:auto;margin-top:128px;position:relative}#no-webgl-toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font:14px 'Google Sans Text',sans-serif;text-align:center;background-color:#e1e1e1;color:#1e1e1e;padding:16px;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.2);min-width:200px;max-width:80%}</style>
+<link rel="stylesheet" href="https://www.gstatic.com/images/icons/material/anim/mspin/mspin_googcolor_large.css">
+<link rel="stylesheet" href="assets/onepick-css.css">
+<link rel="stylesheet" href="assets/drive.css">
+<script async="" src="https://www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script><base href="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/index.html?"><meta flt-viewport="" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_core = async (callback) => {
+        console.debug("Initializing Firebase firebase_core");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"));
+      };
+    </script><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_analytics = async (callback) => {
+        console.debug("Initializing Firebase firebase_analytics");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"));
+      };
+    </script><title>Google Earth</title><meta id="flutterweb-theme" name="theme-color" content="#0b57d0"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-3R2QCKWMJR" async=""></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" charset="UTF-8" src="https://apis.google.com/js/client.js" gapi_processed="true"></script><style></style><style></style></head>
+<body flt-embedding="full-page" flt-renderer="canvaskit (requested explicitly)" flt-build-mode="release" spellcheck="false" style="position: fixed; inset: 0px; overflow: hidden; padding: 0px; margin: 0px; user-select: none; touch-action: none;">
+
+
+<div id="no-webgl-toast">
+</div>
+
+
+<file-selector></file-selector><flt-image-picker-inputs id="__image_picker_web-file-input"></flt-image-picker-inputs><flutter-view flt-view-id="0" style="position: absolute; inset: 0px;"><flt-glass-pane><flt-platform-view id="flt-pv-1" slot="flt-pv-slot-1"><canvas id="earth-canvas" width="803" height="654" style="width: 803px; height: 654px;"></canvas></flt-platform-view><flt-platform-view id="flt-pv-4" slot="flt-pv-slot-4"><div class="web-electable-region-context-menu" style="width: 100%; height: 100%;"></div></flt-platform-view></flt-glass-pane><flt-text-editing-host></flt-text-editing-host><flt-semantics-host style="position: absolute; transform-origin: 0px 0px 0px; transform: scale(1);"></flt-semantics-host><style id="flt-text-editing-stylesheet">flutter-view flt-scene-host {  font: normal normal 14px sans-serif;}flutter-view flt-semantics input[type=range] {  appearance: none;  -webkit-appearance: none;  width: 100%;  position: absolute;  border: none;  top: 0;  right: 0;  bottom: 0;  left: 0;}flutter-view input::selection {  background-color: transparent;}flutter-view textarea::selection {  background-color: transparent;}flutter-view flt-semantics input,flutter-view flt-semantics textarea,flutter-view flt-semantics [contentEditable="true"] {  caret-color: transparent;}flutter-view .flt-text-editing::placeholder {  opacity: 0;}flutter-view .transparentTextEditing:-webkit-autofill,flutter-view .transparentTextEditing:-webkit-autofill:hover,flutter-view .transparentTextEditing:-webkit-autofill:focus,flutter-view .transparentTextEditing:-webkit-autofill:active {  opacity: 0 !important;}</style></flutter-view><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_2.part.js"></script><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_30.part.js"></script><script src="assets/local_file_system_compiled.js" async=""></script><iframe id="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" name="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" src="https://feedback-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=329662878" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><iframe id="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" name="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" src="https://scone-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=854013601" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe></body></html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="origin-trial" content="AjskG7XjAzhXrbO5iSypw0OSMflgB2aEgoT9BuzVaQngLsZbHPNipBOjM5tTKu6K+S0lotXG8JBfV/1QUGK2iA8AAABgeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTl9">
+<meta http-equiv="origin-trial" content="AjJfx2Fc/ccVadVL73yJ+kv2NuDH2tCOphZBB8z8hLZwpUUPHK2olPhEw4pbJX97kZj5pkTvi23hXizmXgmKJAIAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXJzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApLp/OzAos2ZLg2Aj+PqyWNgFJW7gUzPfDu5vLD3SRuSdbaq5hcDJBO0Lf+zICPweHUK0M3PjqjuMcPTni6pOgwAAAB4eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXByb2QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="AqaA9S6ymlbsCNw5fDNelQZgvTNwgTE90zjRDCFnj98ww2WBD5D2Jl7+nVoQ//+18EJ+csrMMEDKGUG8AKqCUg8AAAB5eyJvcmlnaW4iOiJodHRwczovL2NvcnAuZ29vZ2xlLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApJuSYjXxJdKQ7vMoqAiMsVFAegmzj5tlJvh7EVylBXpKh3ZH8/afXTEG3u3Vh14w7vtxWwUfQlYMgFl2uqkGwYAAACHeyJvcmlnaW4iOiJodHRwczovL3NlcnZlLWRvdC16aXBsaW5lLmFwcHNwb3QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="ApQn/7irvRoObTPJw7PT+HV8KwBTb9W3lo+2zRFoxdnTffkbkJh6ykiSae52WnAaHyWB8yYxzm+SPj8Gq3sEFA4AAACUeyJvcmlnaW4iOiJodHRwczovL2ltbWVyc2l2ZS1jYW1lcmEtcGxheWdyb3VuZC5nb29nbGVwbGV4LmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE2ODgwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
+<link rel="icon" href="https://www.gstatic.com/earth/00-favicon.ico">
+<script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.pl.X8qEh8FXihc.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw/cb=gapi.loaded_0?le=scs" async=""></script><script async="">
+      (() => {
+        // This detects Chromium browsers which use a different, smaller version of Canvaskit. This
+        // preload logic is the same as the actual loading logic built into Flutter.
+        let isChromium = Intl.v8BreakIterator != null && Intl.Segmenter != null;
+        let canvaskitBaseUrl = "https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/"
+        if (isChromium) {
+          canvaskitBaseUrl += "chromium/"
+        }
+
+        const canvasKitWasmPreload = document.createElement("link");
+          canvasKitWasmPreload.href = canvaskitBaseUrl + "canvaskit.wasm";
+          canvasKitWasmPreload.rel = "preload";
+          canvasKitWasmPreload.as = "fetch";
+          // Only .wasm should use crossOrigin mode because it is "fetch" type.
+          canvasKitWasmPreload.crossOrigin = "anonymous";
+          document.head.appendChild(canvasKitWasmPreload);
+
+        const canvasKitJsPreload = document.createElement("link");
+          canvasKitJsPreload.href = canvaskitBaseUrl + "canvaskit.js";
+          canvasKitJsPreload.rel = "preload";
+          canvasKitJsPreload.as = "script";
+          document.head.appendChild(canvasKitJsPreload);
+      })();
+    </script><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.wasm" rel="preload" as="fetch" crossorigin="anonymous"><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.js" rel="preload" as="script">
+<script src="assets/clearcut_uploader_compiled.js" defer=""></script>
+<script src="assets/feedback_compiled.js" defer=""></script>
+<script src="assets/hats_compiled.js" defer=""></script>
+<script src="assets/phenotype_client_compiled.js" defer=""></script>
+<script src="assets/drive_picker_compiled.js" defer=""></script>
+<script>(async()=>{const adapter=navigator.gpu&&await navigator.gpu.requestAdapter();const device=adapter&&await adapter.requestDevice();window['webgpu-device']=device;})();window['module']={};</script>
+<script src="assets/plugins_compiled.js" defer=""></script>
+<script src="main.dart.js" defer=""></script>
+<script src="assets/earthplugin_web_wasm/earthplugin_web.js" defer=""></script>
+<link rel="manifest" href="assets/assets/manifest.json" crossorigin="use-credentials" fetchpriority="low">
+<link rel="preload" href="assets/FontManifest.json" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/All1PIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/googlematerialicons/GoogleMaterialIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSymbols_FILL_GRAD_opsz_wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/MaterialIcons-Extended.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Bold.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-BoldItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Italic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Medium.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-MediumItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-Italic-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/ProductSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/KeySymbols-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/kml_path.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/3d.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="prefetch" href="https://kh.google.com/rt/earth/PlanetoidMetadata" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/earthplugin_web_wasm/earthplugin_web.wasm" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link rel="preconnect" href="https://accounts.google.com">
+<link rel="preconnect" href="https://earth-pa.clients6.google.com">
+<link rel="preconnect" href="https://mw1.google.com">
+<link rel="preconnect" href="https://kh.google.com">
+<link rel="preconnect" href="https://apis.google.com">
+<style>@font-face{font-family:'Google Sans Text';font-style:normal;font-weight:400;font-display:block;src:url(assets/GoogleSansText-Regular.ttf) format('truetype')}body{margin:0;padding:0;background-color:#000}#earth-splashscreen{width:100%;height:100%;position:absolute;backgrund-color:black;background-image:url(assets/assets/images/logo_lockup.svg) , url(https://www.gstatic.com/earth/images/00-earth-splash-1x-ltr.jpg) , url(https://www.gstatic.com/earth/images/00-earth-splash-mask-ltr.svg) , url(https://www.gstatic.com/earth/images/01-earth-splash-stars-ltr.webp);background-position:center , bottom right , bottom right , top right;background-size:256px 49px , 1280px 463px , 1164px 380px , cover;background-repeat:no-repeat , no-repeat , no-repeat , no-repeat;background-blend-mode:normal , lighten , normal , normal;-webkit-font-smoothing:subpixel-antialiased;margin:0;padding:0}.earth-splashscreen-vcenter{position:absolute;top:50%;transform:translateY(-50%);width:100%}.earth-splashscreen-hcenter{margin-left:auto;margin-right:auto;position:relative;text-align:center}#earth-splashscreen-spinner{margin-left:auto;margin-right:auto;margin-top:128px;position:relative}#no-webgl-toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font:14px 'Google Sans Text',sans-serif;text-align:center;background-color:#e1e1e1;color:#1e1e1e;padding:16px;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.2);min-width:200px;max-width:80%}</style>
+<link rel="stylesheet" href="https://www.gstatic.com/images/icons/material/anim/mspin/mspin_googcolor_large.css">
+<link rel="stylesheet" href="assets/onepick-css.css">
+<link rel="stylesheet" href="assets/drive.css">
+<script async="" src="https://www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script><base href="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/index.html?"><meta flt-viewport="" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_core = async (callback) => {
+        console.debug("Initializing Firebase firebase_core");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"));
+      };
+    </script><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_analytics = async (callback) => {
+        console.debug("Initializing Firebase firebase_analytics");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"));
+      };
+    </script><title>Google Earth</title><meta id="flutterweb-theme" name="theme-color" content="#0b57d0"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-3R2QCKWMJR" async=""></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" charset="UTF-8" src="https://apis.google.com/js/client.js" gapi_processed="true"></script><style></style><style></style></head>
+	<body flt-embedding="full-page" flt-renderer="canvaskit (requested explicitly)" flt-build-mode="release" spellcheck="false" style="position: fixed; inset: 0px; overflow: hidden; padding: 0px; margin: 0px; user-select: none; touch-action: none;">
+
+
+<div id="no-webgl-toast">
+</div>
+
+
+<file-selector></file-selector><flt-image-picker-inputs id="__image_picker_web-file-input"></flt-image-picker-inputs><flutter-view flt-view-id="0" style="position: absolute; inset: 0px;"><flt-glass-pane><flt-platform-view id="flt-pv-1" slot="flt-pv-slot-1"><canvas id="earth-canvas" width="803" height="654" style="width: 803px; height: 654px;"></canvas></flt-platform-view><flt-platform-view id="flt-pv-4" slot="flt-pv-slot-4"><div class="web-electable-region-context-menu" style="width: 100%; height: 100%;"></div></flt-platform-view></flt-glass-pane><flt-text-editing-host></flt-text-editing-host><flt-semantics-host style="position: absolute; transform-origin: 0px 0px 0px; transform: scale(1);"></flt-semantics-host><style id="flt-text-editing-stylesheet">flutter-view flt-scene-host {  font: normal normal 14px sans-serif;}flutter-view flt-semantics input[type=range] {  appearance: none;  -webkit-appearance: none;  width: 100%;  position: absolute;  border: none;  top: 0;  right: 0;  bottom: 0;  left: 0;}flutter-view input::selection {  background-color: transparent;}flutter-view textarea::selection {  background-color: transparent;}flutter-view flt-semantics input,flutter-view flt-semantics textarea,flutter-view flt-semantics [contentEditable="true"] {  caret-color: transparent;}flutter-view .flt-text-editing::placeholder {  opacity: 0;}flutter-view .transparentTextEditing:-webkit-autofill,flutter-view .transparentTextEditing:-webkit-autofill:hover,flutter-view .transparentTextEditing:-webkit-autofill:focus,flutter-view .transparentTextEditing:-webkit-autofill:active {  opacity: 0 !important;}</style></flutter-view><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_2.part.js"></script><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_30.part.js"></script><script src="assets/local_file_system_compiled.js" async=""></script><iframe id="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" name="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" src="https://feedback-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=329662878" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><iframe id="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" name="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" src="https://scone-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=854013601" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe></body>
+<html lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="origin-trial" content="AjskG7XjAzhXrbO5iSypw0OSMflgB2aEgoT9BuzVaQngLsZbHPNipBOjM5tTKu6K+S0lotXG8JBfV/1QUGK2iA8AAABgeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjgwODAiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTl9">
+<meta http-equiv="origin-trial" content="AjJfx2Fc/ccVadVL73yJ+kv2NuDH2tCOphZBB8z8hLZwpUUPHK2olPhEw4pbJX97kZj5pkTvi23hXizmXgmKJAIAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXJzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApLp/OzAos2ZLg2Aj+PqyWNgFJW7gUzPfDu5vLD3SRuSdbaq5hcDJBO0Lf+zICPweHUK0M3PjqjuMcPTni6pOgwAAAB4eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXByb2QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="AqaA9S6ymlbsCNw5fDNelQZgvTNwgTE90zjRDCFnj98ww2WBD5D2Jl7+nVoQ//+18EJ+csrMMEDKGUG8AKqCUg8AAAB5eyJvcmlnaW4iOiJodHRwczovL2NvcnAuZ29vZ2xlLmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MDk4NTU5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta http-equiv="origin-trial" content="ApJuSYjXxJdKQ7vMoqAiMsVFAegmzj5tlJvh7EVylBXpKh3ZH8/afXTEG3u3Vh14w7vtxWwUfQlYMgFl2uqkGwYAAACHeyJvcmlnaW4iOiJodHRwczovL3NlcnZlLWRvdC16aXBsaW5lLmFwcHNwb3QuY29tOjQ0MyIsImZlYXR1cmUiOiJVbnJlc3RyaWN0ZWRTaGFyZWRBcnJheUJ1ZmZlciIsImV4cGlyeSI6MTcwOTg1NTk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+<meta http-equiv="origin-trial" content="ApQn/7irvRoObTPJw7PT+HV8KwBTb9W3lo+2zRFoxdnTffkbkJh6ykiSae52WnAaHyWB8yYxzm+SPj8Gq3sEFA4AAACUeyJvcmlnaW4iOiJodHRwczovL2ltbWVyc2l2ZS1jYW1lcmEtcGxheWdyb3VuZC5nb29nbGVwbGV4LmNvbTo0NDMiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE2ODgwODMxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
+<link rel="icon" href="https://www.gstatic.com/earth/00-favicon.ico">
+<script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.pl.X8qEh8FXihc.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw/cb=gapi.loaded_0?le=scs" async=""></script><script async="">
+      (() => {
+        // This detects Chromium browsers which use a different, smaller version of Canvaskit. This
+        // preload logic is the same as the actual loading logic built into Flutter.
+        let isChromium = Intl.v8BreakIterator != null && Intl.Segmenter != null;
+        let canvaskitBaseUrl = "https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/"
+        if (isChromium) {
+          canvaskitBaseUrl += "chromium/"
+        }
+
+        const canvasKitWasmPreload = document.createElement("link");
+          canvasKitWasmPreload.href = canvaskitBaseUrl + "canvaskit.wasm";
+          canvasKitWasmPreload.rel = "preload";
+          canvasKitWasmPreload.as = "fetch";
+          // Only .wasm should use crossOrigin mode because it is "fetch" type.
+          canvasKitWasmPreload.crossOrigin = "anonymous";
+          document.head.appendChild(canvasKitWasmPreload);
+
+        const canvasKitJsPreload = document.createElement("link");
+          canvasKitJsPreload.href = canvaskitBaseUrl + "canvaskit.js";
+          canvasKitJsPreload.rel = "preload";
+          canvasKitJsPreload.as = "script";
+          document.head.appendChild(canvasKitJsPreload);
+      })();
+    </script><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.wasm" rel="preload" as="fetch" crossorigin="anonymous"><link href="https://www.gstatic.com/flutter-canvaskit/4f119619dfa8af4eb5178f2bb289004209c26cad/chromium/canvaskit.js" rel="preload" as="script">
+<script src="assets/clearcut_uploader_compiled.js" defer=""></script>
+<script src="assets/feedback_compiled.js" defer=""></script>
+<script src="assets/hats_compiled.js" defer=""></script>
+<script src="assets/phenotype_client_compiled.js" defer=""></script>
+<script src="assets/drive_picker_compiled.js" defer=""></script>
+<script>(async()=>{const adapter=navigator.gpu&&await navigator.gpu.requestAdapter();const device=adapter&&await adapter.requestDevice();window['webgpu-device']=device;})();window['module']={};</script>
+<script src="assets/plugins_compiled.js" defer=""></script>
+<script src="main.dart.js" defer=""></script>
+<script src="assets/earthplugin_web_wasm/earthplugin_web.js" defer=""></script>
+<link rel="manifest" href="assets/assets/manifest.json" crossorigin="use-credentials" fetchpriority="low">
+<link rel="preload" href="assets/FontManifest.json" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/All1PIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/googlematerialicons/GoogleMaterialIcons-Regular.otf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSymbols_FILL_GRAD_opsz_wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/MaterialIcons-Extended.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-BoldItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Bold.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Italic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-MediumItalic.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Medium.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansDisplay-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Bold.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-BoldItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Italic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Medium.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-MediumItalic.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/GoogleSansText-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/GoogleSansMono-Italic-wght.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/ProductSans-Regular.nohints.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/fonts/KeySymbols-Regular.ttf" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/kml_path.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/assets/icons/3d.svg" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="prefetch" href="https://kh.google.com/rt/earth/PlanetoidMetadata" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preload" href="assets/earthplugin_web_wasm/earthplugin_web.wasm" as="fetch" crossorigin="anonymous" fetchpriority="low">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link rel="preconnect" href="https://accounts.google.com">
+<link rel="preconnect" href="https://earth-pa.clients6.google.com">
+<link rel="preconnect" href="https://mw1.google.com">
+<link rel="preconnect" href="https://kh.google.com">
+<link rel="preconnect" href="https://apis.google.com">
+<style>@font-face{font-family:'Google Sans Text';font-style:normal;font-weight:400;font-display:block;src:url(assets/GoogleSansText-Regular.ttf) format('truetype')}body{margin:0;padding:0;background-color:#000}#earth-splashscreen{width:100%;height:100%;position:absolute;backgrund-color:black;background-image:url(assets/assets/images/logo_lockup.svg) , url(https://www.gstatic.com/earth/images/00-earth-splash-1x-ltr.jpg) , url(https://www.gstatic.com/earth/images/00-earth-splash-mask-ltr.svg) , url(https://www.gstatic.com/earth/images/01-earth-splash-stars-ltr.webp);background-position:center , bottom right , bottom right , top right;background-size:256px 49px , 1280px 463px , 1164px 380px , cover;background-repeat:no-repeat , no-repeat , no-repeat , no-repeat;background-blend-mode:normal , lighten , normal , normal;-webkit-font-smoothing:subpixel-antialiased;margin:0;padding:0}.earth-splashscreen-vcenter{position:absolute;top:50%;transform:translateY(-50%);width:100%}.earth-splashscreen-hcenter{margin-left:auto;margin-right:auto;position:relative;text-align:center}#earth-splashscreen-spinner{margin-left:auto;margin-right:auto;margin-top:128px;position:relative}#no-webgl-toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font:14px 'Google Sans Text',sans-serif;text-align:center;background-color:#e1e1e1;color:#1e1e1e;padding:16px;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.2);min-width:200px;max-width:80%}</style>
+<link rel="stylesheet" href="https://www.gstatic.com/images/icons/material/anim/mspin/mspin_googcolor_large.css">
+<link rel="stylesheet" href="assets/onepick-css.css">
+<link rel="stylesheet" href="assets/drive.css">
+<script async="" src="https://www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script><base href="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/index.html?"><meta flt-viewport="" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_core = async (callback) => {
+        console.debug("Initializing Firebase firebase_core");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"));
+      };
+    </script><script type="text/javascript" crossorigin="anonymous">      window.ff_trigger_firebase_analytics = async (callback) => {
+        console.debug("Initializing Firebase firebase_analytics");
+        callback(await import("https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js"));
+      };
+    </script><title>Google Earth</title><meta id="flutterweb-theme" name="theme-color" content="#0b57d0"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-3R2QCKWMJR" async=""></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" charset="UTF-8" src="https://apis.google.com/js/client.js" gapi_processed="true"></script><style></style><style></style></head>
+<body flt-embedding="full-page" flt-renderer="canvaskit (requested explicitly)" flt-build-mode="release" spellcheck="false" style="position: fixed; inset: 0px; overflow: hidden; padding: 0px; margin: 0px; user-select: none; touch-action: none;">
+
+
+<div id="no-webgl-toast">
+</div>
+
+
+<file-selector></file-selector><flt-image-picker-inputs id="__image_picker_web-file-input"></flt-image-picker-inputs><flutter-view flt-view-id="0" style="position: absolute; inset: 0px;"><flt-glass-pane><flt-platform-view id="flt-pv-1" slot="flt-pv-slot-1"><canvas id="earth-canvas" width="803" height="654" style="width: 803px; height: 654px;"></canvas></flt-platform-view><flt-platform-view id="flt-pv-4" slot="flt-pv-slot-4"><div class="web-electable-region-context-menu" style="width: 100%; height: 100%;"></div></flt-platform-view></flt-glass-pane><flt-text-editing-host></flt-text-editing-host><flt-semantics-host style="position: absolute; transform-origin: 0px 0px 0px; transform: scale(1);"></flt-semantics-host><style id="flt-text-editing-stylesheet">flutter-view flt-scene-host {  font: normal normal 14px sans-serif;}flutter-view flt-semantics input[type=range] {  appearance: none;  -webkit-appearance: none;  width: 100%;  position: absolute;  border: none;  top: 0;  right: 0;  bottom: 0;  left: 0;}flutter-view input::selection {  background-color: transparent;}flutter-view textarea::selection {  background-color: transparent;}flutter-view flt-semantics input,flutter-view flt-semantics textarea,flutter-view flt-semantics [contentEditable="true"] {  caret-color: transparent;}flutter-view .flt-text-editing::placeholder {  opacity: 0;}flutter-view .transparentTextEditing:-webkit-autofill,flutter-view .transparentTextEditing:-webkit-autofill:hover,flutter-view .transparentTextEditing:-webkit-autofill:focus,flutter-view .transparentTextEditing:-webkit-autofill:active {  opacity: 0 !important;}</style></flutter-view><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_2.part.js"></script><script type="text/javascript" src="https://earth.google.com/static/multi-threaded/versions/10.49.0.0/main.dart.js_30.part.js"></script><script src="assets/local_file_system_compiled.js" async=""></script><iframe id="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" name="apiproxy1578993bbc1eabcae5b679adf25606e0ffffd2590.3548380158" src="https://feedback-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=329662878" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><iframe id="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" name="apiproxyf517e5869d41bcd3c54f57a94c6ffc4235bc08b70.2324679865" src="https://scone-pa.clients6.google.com/static/proxy.html?usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.pl.X8qEh8FXihc.O%2Fd%3D1%2Frs%3DAHpOoo8dQrnrBs5iluG6c3YANNpae_aYlw%2Fm%3D__features__#parent=https%3A%2F%2Fearth.google.com&amp;rpctoken=854013601" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe></body></html>
